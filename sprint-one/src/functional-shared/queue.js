@@ -35,6 +35,8 @@ queueMethods.enqueue = function(value) {
   this.length++;
   // set value at 'last index/key' to input value
   this[this.length - 1] = value;
+
+  return this.length;
 };
 
 // the .dequeue method of queueMethods (shift)
@@ -53,7 +55,7 @@ queueMethods.dequeue = function() {
 
   // decrement .length by 1
   this.length--;
-  
+
   // return result variable
   return dequeued;
 };

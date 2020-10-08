@@ -3,7 +3,7 @@ var Queue = function() {
 
   // Use an object with numeric keys to store values
   var storage = {};
-  
+
   storage.size = 0;
   // Implement the methods below
 
@@ -13,6 +13,8 @@ var Queue = function() {
     storage.size++;
     // assign input value to 'last index/key'
     storage[storage.size - 1] = value;
+
+    return storage.size;
   };
 
   // remove and return value at the front of the queue (shift)

@@ -37,6 +37,8 @@ stackMethods.push = function(value) {
   this.length++;
   // set property at 'last index/key' of Stack to input value
   this[this.length - 1] = value;
+
+  return this.length;
 };
 
 // the .pop method of stackMethods

@@ -31,6 +31,8 @@ stackMethods.push = function(value) {
   this.length++;
 
   this[this.length - 1] = value;
+
+  return this.length;
 };
 
 // the .pop method of stackMethods

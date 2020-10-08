@@ -26,11 +26,13 @@ queueMethods.enqueue = function(value) {
   this.length++;
 
   this[this.length - 1] = value;
+
+  return this.length;
 };
 
 // .shift method
 queueMethods.dequeue = function() {
-  
+
   var dequeued = this[0];
 
   for (var index in this) {

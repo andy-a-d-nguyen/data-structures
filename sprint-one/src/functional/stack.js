@@ -14,6 +14,8 @@ var Stack = function() {
 
     // assign value to a key that is 1 less than the size
     storage[storage.size - 1] = value;
+
+    return storage.size;
   };
 
   someInstance.pop = function() {
@@ -36,7 +38,7 @@ var Stack = function() {
       // set size to 0
       storage.size = 0;
     }
-    
+
     // return size property
     return storage.size;
   };
