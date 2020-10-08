@@ -5,7 +5,6 @@ var Stack = function() {
   // create a .length property in the instance
   this.length = 0;
 
-
 };
 
 // create a .size method in the Stack prototype

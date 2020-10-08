@@ -22,19 +22,23 @@ var stackMethods = {};
 
 // the .size method of stackMethods
 stackMethods.size = function() {
+
   // if Stack.length is less than 0
   if (this.length < 0) {
     // set Stack.length to 0
     this.length = 0;
   }
+
   // return Stack.length
   return this.length;
 };
 
 // the .push method of stackMethods
 stackMethods.push = function(value) {
+
   // increment Stack.push by 1
   this.length++;
+
   // set property at 'last index/key' of Stack to input value
   this[this.length - 1] = value;
 
@@ -43,12 +47,16 @@ stackMethods.push = function(value) {
 
 // the .pop method of stackMethods
 stackMethods.pop = function() {
+
   // create a variable to store popped value
   var popped = this[this.length - 1];
+
   // delete property at 'last index/key'
   delete this[this.length - 1];
+
   // decrement Stack.length by 1
   this.length--;
+  
   // return result variable
   return popped;
 };

@@ -7,6 +7,18 @@ var Queue = function() {
   storage.size = 0;
   // Implement the methods below
 
+  // return the 'length' of the instantiated object
+  someInstance.size = function() {
+    // if size is less than 0
+    if (storage.size < 0) {
+      // assign size to be 0
+      storage.size = 0;
+    }
+
+    // return size
+    return storage.size;
+  };
+
   // add input value to the back of the queue (push)
   someInstance.enqueue = function(value) {
     // increment size by 1
@@ -37,17 +49,6 @@ var Queue = function() {
 
     // return removed value
     return dequeued;
-  };
-
-  someInstance.size = function() {
-    // if size is less than 0
-    if (storage.size < 0) {
-      // assign size to be 0
-      storage.size = 0;
-    }
-
-    // return size
-    return storage.size;
   };
 
   return someInstance;

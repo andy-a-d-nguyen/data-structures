@@ -8,6 +8,18 @@ var Stack = function() {
   storage.size = 0;
 
   // Implement the methods below
+
+  someInstance.size = function() {
+    // if size is less than 0
+    if (storage.size < 0) {
+      // set size to 0
+      storage.size = 0;
+    }
+
+    // return size property
+    return storage.size;
+  };
+
   someInstance.push = function(value) {
     // increment size by 1 when a new value is added
     storage.size++;
@@ -30,17 +42,6 @@ var Stack = function() {
 
     // return the popped value
     return popped;
-  };
-
-  someInstance.size = function() {
-    // if size is less than 0
-    if (storage.size < 0) {
-      // set size to 0
-      storage.size = 0;
-    }
-
-    // return size property
-    return storage.size;
   };
 
   return someInstance;

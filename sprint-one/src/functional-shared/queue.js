@@ -20,6 +20,7 @@ var queueMethods = {};
 
 // the .size method of queueMethods
 queueMethods.size = function() {
+
   // if someInstance.length is less than 0
   if (this.length < 0) {
     // set someInstance.length to 0
@@ -31,8 +32,10 @@ queueMethods.size = function() {
 
 // the .enqueue method of queueMethods (push)
 queueMethods.enqueue = function(value) {
+
   // increment someInstance.length by 1
   this.length++;
+  
   // set value at 'last index/key' to input value
   this[this.length - 1] = value;
 
