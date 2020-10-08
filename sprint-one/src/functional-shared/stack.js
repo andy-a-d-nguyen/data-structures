@@ -49,4 +49,4 @@ stackMethods.pop = function() {
   this.length--;
   // return result variable
   return popped;
-}
+};
