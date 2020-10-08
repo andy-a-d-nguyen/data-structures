@@ -17,22 +17,30 @@ var stackMethods = {};
 
 // the .size method of stackMethods
 stackMethods.size = function() {
+
   if (this.length < 0) {
     this.length = 0;
   }
+
   return this.length;
 };
 
 // the .push method of stackMethods
 stackMethods.push = function(value) {
+
   this.length++;
+
   this[this.length - 1] = value;
 };
 
 // the .pop method of stackMethods
 stackMethods.pop = function() {
+
   var popped = this[this.length - 1];
+
   delete this[this.length - 1];
+
   this.length--;
+
   return popped;
 };

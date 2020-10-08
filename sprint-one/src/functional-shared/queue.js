@@ -41,17 +41,19 @@ queueMethods.enqueue = function(value) {
 queueMethods.dequeue = function() {
   // create a variable to store dequeued value and assign to value at 'first index/key'
   var dequeued = this[0];
-  // delete value at 'fist index/key'
-  delete this[0];
+
   // iterate over the instance
-  for (var key in this) {
+  for (var index in this) {
     // assign value at current key to value at key - 1
-    this[key - 1] = this[key];
+    this[index - 1] = this[index];
   }
+
   // delete the last key because it is a property that shares the same value with the 'index/key' before it
   delete this[this.length - 1];
+
   // decrement .length by 1
   this.length--;
+  
   // return result variable
   return dequeued;
 };

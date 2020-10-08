@@ -3,6 +3,7 @@ var Queue = function() {
 
   // Use an object with numeric keys to store values
   var storage = {};
+  
   storage.size = 0;
   // Implement the methods below
 
@@ -19,17 +20,19 @@ var Queue = function() {
     // create a variable to store removed value
     // assign variable to value at 'first index/key'
     var dequeued = storage[0];
-    // delete value at 'first index/key'
-    delete storage[0];
+
     // iterate over storage
-    for (var key in storage) {
+    for (var index in storage) {
       // assign value at current key to key that is 1 less than current key
-      storage[key - 1] = storage[key];
+      storage[index - 1] = storage[index];
     }
+
     // delete the last property because its value now lies in new index that is 1 less and is not needed
     delete storage[storage.size - 1];
+
     // decrement size by 1
     storage.size--;
+
     // return removed value
     return dequeued;
   };
@@ -40,6 +43,7 @@ var Queue = function() {
       // assign size to be 0
       storage.size = 0;
     }
+
     // return size
     return storage.size;
   };
