@@ -1,20 +1,36 @@
 
+//whats the sideEffect of .insert
+//what this refers to in this._storage
 
-var HashTable = function() {
+
+var HashTable = function () {
   this._limit = 8;
   this._storage = LimitedArray(this._limit);
 };
+
+
 //k = key, v = value;
-HashTable.prototype.insert = function(k, v) {
+HashTable.prototype.insert = function (k, v) {
   var index = getIndexBelowMaxForKey(k, this._limit);
+  //asssign value at index to value
+  // console.log('pre', this._storage)
+  this._storage[k] = v;
+  // console.log('post', storage)
+  // this._storage.set(index, v)
+
+
+
 };
 
-HashTable.prototype.retrieve = function(k) {
+HashTable.prototype.retrieve = function (k) {
   var index = getIndexBelowMaxForKey(k, this._limit);
+  return this._storage[k];
+
 };
 
-HashTable.prototype.remove = function(k) {
+HashTable.prototype.remove = function (k) {
   var index = getIndexBelowMaxForKey(k, this._limit);
+  delete this._storage[k];
 };
 
 
