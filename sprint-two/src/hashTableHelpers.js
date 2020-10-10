@@ -17,20 +17,22 @@ var LimitedArray = function(limit) {
   var limitedArray = {};
 
   limitedArray.get = function(index) {
-    console.log(storage);
+
     checkLimit(index);
+    
     return storage[index];
   };
 
   limitedArray.set = function(index, value) {
-    console.log(storage);
+
     checkLimit(index);
+
     storage[index] = value;
 
   };
 
   limitedArray.each = function(callback) {
-    console.log(storage);
+
     for (var i = 0; i < storage.length; i++) {
       callback(storage[i], i, storage);
     }
