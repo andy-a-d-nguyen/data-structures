@@ -23,5 +23,12 @@ describe('set', function() {
     set.remove('Mel Gibson');
     expect(set.contains('Mel Gibson')).to.equal(false);
   });
+  //new test
+  it('should not add undefined or null to a set', function() {
+    set.add(undefined);
+    set.add(null);
+    expect(set.contains(undefined)).to.equal(false);
+    expect(set.contains(null)).to.equal(false);
+  });
 
 });

@@ -41,4 +41,10 @@ describe('tree', function() {
     expect(tree.contains(8)).to.equal(true);
   });
 
+  //new test , even implemented bind
+  it('should not add nodes with undefined or null values', function() {
+    expect(tree.addChild.bind(null)).to.throw();
+    expect(tree.addChild.bind(undefined)).to.throw();
+  });
+
 });

@@ -40,6 +40,9 @@ var LinkedList = function() {
 };
 
 var Node = function(value) {
+  if (!value) {
+    throw new Error ('input is null or undefined');
+  }
   var node = {};
 
   node.value = value;

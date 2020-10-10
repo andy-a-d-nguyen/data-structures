@@ -37,4 +37,11 @@ describe('binarySearchTree', function() {
     binarySearchTree.depthFirstLog(func);
     expect(array).to.eql([5, 2, 3, 7]);
   });
+
+  //new test
+  it('should return an error if asked to insert a non integer', function() {
+    binarySearchTree.insert('not an integer');
+    expect(binarySearchTree.insert('not an integer')).to.equal('input not an integer');
+  });
+
 });

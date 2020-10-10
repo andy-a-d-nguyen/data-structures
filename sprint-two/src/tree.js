@@ -11,6 +11,9 @@ var Tree = function(value) {
 var treeMethods = {};
 
 treeMethods.addChild = function(value) {
+  if (!value) {
+    throw new Error ('input is null or undefined');
+  }
   //.addChild() method, takes any value,
   // sets that as the target of a node,
   // and adds that node as a child of the tree
@@ -32,12 +35,10 @@ treeMethods.addChild = function(value) {
 
   var node = Tree(value);
 
-  if (this.value === undefined) {
+  if (!this.value) {
     this.value = node.value;
   }
   this.children.push(node);
-
-  // console.log(this)
 };
 
 treeMethods.contains = function(target) {

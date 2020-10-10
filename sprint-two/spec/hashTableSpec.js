@@ -73,4 +73,12 @@ describe('hashTable', function() {
     hashTable.remove('Mr.');
     expect(hashTable._limit).to.equal(8);
   });
+  //new test
+  it('should not add null or undefined a key or value', function() {
+    expect(hashTable.insert.bind(null, '1')).to.throw();
+    expect(hashTable.insert.bind(undefined, '1')).to.throw();
+    expect(hashTable.insert.bind('1', null)).to.throw();
+    expect(hashTable.insert.bind('1', undefined)).to.throw();
+  });
+
 });

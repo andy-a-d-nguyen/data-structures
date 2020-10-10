@@ -52,4 +52,10 @@ describe('linkedList', function() {
   });
 
   // add more tests here to test the functionality of linkedList
+  //new test -- even got to use bind again--//
+  it('should not add null or undefined', function() {
+    expect(linkedList.contains.bind(null)).to.throw();
+    expect(linkedList.contains.bind(undefined)).to.throw();
+  });
+
 });

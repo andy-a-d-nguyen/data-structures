@@ -11,6 +11,9 @@ var BinarySearchTree = function (value) {
 var methods = {};
 
 methods.insert = function (value) {
+  if (typeof value !== 'number') {
+    return 'input not an integer';
+  }
   // create a new bubble
   // iterate over root
   // if value is smaller than root's value

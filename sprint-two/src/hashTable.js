@@ -12,7 +12,11 @@ var HashTable = function () {
 
 //k = key, v = value;
 HashTable.prototype.insert = function (k, v) {
+
   var index = getIndexBelowMaxForKey(k, this._limit);
+  if (!k || !v) {
+    throw new Error ('null or undefined cannot be added as a key or value');
+  }
   //asssign value at index to value
   // console.log('pre', this._storage)
   this._storage[k] = v;
