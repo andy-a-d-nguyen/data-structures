@@ -1,4 +1,5 @@
-
+//                   REVISIT AND IMPLEMENT HELPER FUNCTIONS
+//-----------------------------------------------------------------------------//
 //whats the sideEffect of .insert
 //what this refers to in this._storage
 
